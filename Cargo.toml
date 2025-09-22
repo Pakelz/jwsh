@@ -1,6 +1,6 @@
 [package]
 name = "jwsh"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 authors = ["Pakelz <wpachmad@gmail.com>"]
 description = "CLI untuk menampilkan jadwal sholat dari API MyQuran"

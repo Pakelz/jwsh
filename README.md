@@ -13,12 +13,12 @@ Saat ini hanya ada satu fitur yaitu jadwal sholat saja.
 ## Contoh Penggunaan
 Jika hanya nama Kota atau Kabupaten hanya satu kata:
 ```sh
-jwsh sholat bandung
+jwsh -s bandung
 ```
 
 Jika nama Kota atau Kabupaten 2 kata:
 ```sh
-jwsh sholat "Lampung Barat"
+jwsh -s "Lampung Barat"
 ```
 
 ## Cara Install

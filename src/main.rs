@@ -3,10 +3,7 @@ use std::path::Path;
 use clap::Parser;
 use jwsh::show;
 
-use crate::{
-    api::init,
-    cli::{Cli, Commands},
-};
+use crate::{api::init, cli::Cli};
 
 mod api;
 mod cli;
@@ -21,9 +18,7 @@ fn main() {
     }
 
     let cli = Cli::parse();
-    match cli.command {
-        Commands::Sholat { kota } => {
-            show(kota.to_string());
-        }
+    if let Some(kota) = cli.sholat {
+        show(kota);
     }
 }
