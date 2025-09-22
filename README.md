@@ -5,7 +5,10 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Build](https://github.com/Pakelz/jwsh/actions/workflows/ci.yml/badge.svg)](https://github.com/Pakelz/jwsh/actions)
 
-**jwsh** adalah program cli yang berfungsi untuk menampilkan jadwal sholat di terminal linux. Untuk saat ini jwsh hanya support linux atau unix system. Program ini memerlukan 1 argument Kota atau Kabupaten tempat anda atau daerah yang ingin anda ketahui jadwal sholatnya.
+Program cli yang berfungsi untuk menampilkan jadwal sholat di terminal linux.
+
+## Fitur
+Saat ini hanya ada satu fitur yaitu jadwal sholat saja.
 
 ## Contoh Penggunaan
 Jika hanya nama Kota atau Kabupaten hanya satu kata:
@@ -17,4 +20,13 @@ Jika nama Kota atau Kabupaten 2 kata:
 ```sh
 jwsh sholat "Lampung Barat"
 ```
+
+## Cara Install
+
+1. Melalui cargo
+```sh
+cargo install jwsh
 ```
+
+## Development Status
+Projek ini masih dalam pengembangan
