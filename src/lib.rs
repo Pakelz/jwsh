@@ -1,13 +1,14 @@
 mod helper;
 use std::io::{self, Write};
 
-use crate::{api::get_jadwal, ui::{show_jadwal, show_possible_location}};
+use crate::{
+    api::get_jadwal,
+    ui::{show_jadwal, show_possible_location},
+};
 
 mod api;
 mod models;
 mod ui;
-
-
 
 pub fn show(input: String) {
     let test = api::find_city(&input.trim());

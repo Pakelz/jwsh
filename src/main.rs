@@ -1,12 +1,15 @@
 use std::path::Path;
 
 use clap::Parser;
-use jwsh::{show};
+use jwsh::show;
 
-use crate::{api::init, cli::{Cli, Commands}};
+use crate::{
+    api::init,
+    cli::{Cli, Commands},
+};
 
-mod cli;
 mod api;
+mod cli;
 mod helper;
 mod models;
 
