@@ -3,7 +3,6 @@
 [![Crates.io](https://img.shields.io/crates/v/jwsh)](https://crates.io/crates/jwsh)
 [![Docs.rs](https://docs.rs/jwsh/badge.svg)](https://docs.rs/jwsh)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Build](https://github.com/Pakelz/jwsh/actions/workflows/ci.yml/badge.svg)](https://github.com/Pakelz/jwsh/actions)
 
 Program cli yang berfungsi untuk menampilkan jadwal sholat di terminal linux.
 
@@ -23,7 +22,7 @@ jwsh -s "Lampung Barat"
 
 ## Cara Install
 
-1. Melalui cargo
+- Melalui cargo
 ```sh
 cargo install jwsh
 ```
