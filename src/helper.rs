@@ -10,14 +10,13 @@ pub fn time_now_string() -> String {
 }
 
 pub fn kota_json_path() -> PathBuf {
-    #[cfg(target_os = "macos")]
-    let base = {
-        let home = std::env::var("HOME").expect("HOME not set");
-        PathBuf::from(home)
-            .join("Library")
-            .join("Application Support")
-    };
-
+    // #[cfg(target_os = "macos")]
+    // let base = {
+    //     let home = std::env::var("HOME").expect("HOME not set");
+    //     PathBuf::from(home)
+    //         .join("Library")
+    //         .join("Application Support")
+    // };
     #[cfg(not(target_os = "macos"))]
     let base = std::env::var("XDG_CONFIG_HOME")
         .map(PathBuf::from)

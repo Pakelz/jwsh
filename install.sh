@@ -1,4 +1,4 @@
-#!/usr/bin/env/ bash
+#!/usr/bin/env bash
 
 set -e
 
@@ -14,8 +14,6 @@ ARCH=$(uname -m)
 
 if [ "$OS" = "Linux" ]; then
   FILE="jwsh-Linux.tar.gz"
-elif [ "$OS" = "Darwin" ]; then
-  FILE="jwsh-macOS.tar.gz"
 else
   echo "OS $OS tidak didukung"
   exit 1
@@ -29,7 +27,10 @@ curl -L "$URL" -o "$FILE"
 echo "📦 Extracting..."
 tar -xzf "$FILE"
 
-echo "🚀 Installing to /usr/local/bin (butuh sudo)"
+echo "🚀 Installing to /usr/local/bin (need sudo)"
 sudo mv jwsh /usr/local/bin/
+
+echo "🧹 Cleaning up"
+rm -f "$FILE"
 
 echo "✅ Done! Try run: jwsh -h"
