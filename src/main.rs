@@ -1,5 +1,3 @@
-use std::path::Path;
-
 use clap::Parser;
 use jwsh::show;
 
@@ -11,7 +9,9 @@ mod helper;
 mod models;
 
 fn main() {
-    if !Path::new("kota.json").exists() {
+    let path = helper::kota_json_path();
+
+    if !path.exists() {
         if let Err(e) = init() {
             eprintln!("Error: {e}");
         }
