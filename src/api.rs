@@ -1,16 +1,19 @@
 #![allow(unused)]
-use crate::{helper::time_now_string, models::{Jadwal, Response}};
+use crate::{
+    helper::{self, kota_json_path, time_now_string},
+    models::{Jadwal, Response},
+};
 
 pub fn init() -> Result<(), Box<dyn std::error::Error>> {
     let url = "https://api.myquran.com/v2/sholat/kota/semua";
     let response: Response = reqwest::blocking::get(url)?.json()?;
     let json = serde_json::to_string_pretty(&response)?;
-    std::fs::write("kota.json", json)?;
+    std::fs::write(helper::kota_json_path(), json)?;
     Ok(())
 }
 
 pub fn find_city(input: &str) -> Result<(Vec<String>, Vec<String>), Box<dyn std::error::Error>> {
-    let file = std::fs::read_to_string("kota.json")?;
+    let file = std::fs::read_to_string(kota_json_path())?;
     let response: Response = serde_json::from_str(&file)?;
 
     Ok(response.get_id(input))
