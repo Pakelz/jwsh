@@ -28,5 +28,10 @@ jwsh -s "Lampung Barat"
 cargo install jwsh
 ```
 
+2. Melalui command
+```sh
+curl -sL https://raw.githubusercontent.com/Pakelz/jwsh/main/install.sh | bash
+```
+
 ## Development Status
 Projek ini masih dalam pengembangan
